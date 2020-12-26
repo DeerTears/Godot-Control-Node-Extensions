@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://extension_scenes/vradiobutton/vradio.gd" type="Script" id=1]
+
+[node name="VRadio" type="Panel"]
+margin_right = 262.0
+margin_bottom = 119.0
+rect_min_size = Vector2( 52, 64 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "To prevent  players from choosing \"none\" as an option, untick the \"Allow None\" box.
+
+To alter the text on buttons, and to alter the String passed in the \"choice\" signal, edit the Strings in the Choices array here. The button text and the passed String are the same for simplicity.
+
+If you want more choices, add more buttons, and adjust the \"match option\" statement accordingly. It is ultimately up to you how more than 2 buttons should be implemented. Keep \"allow none\" on if you have more than 2 options."
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 52, 64 )
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="VBoxContainer" parent="Margin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 254.0
+margin_bottom = 111.0
+custom_constants/separation = 8
+
+[node name="Top" type="Button" parent="Margin/Container"]
+margin_right = 246.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+text = "Top"
+clip_text = true
+
+[node name="Bottom" type="Button" parent="Margin/Container"]
+margin_top = 55.0
+margin_right = 246.0
+margin_bottom = 103.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+text = "Bottom"
+clip_text = true

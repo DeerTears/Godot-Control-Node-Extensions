@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://extension_scenes/diagonalcontainer/diagonalcontainer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://examples/cardstack/card.tscn" type="PackedScene" id=2]
+
+[node name="Cardstack" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DiagonalContainer" parent="." instance=ExtResource( 1 )]
+margin_right = -69.0
+margin_bottom = -75.0
+
+[node name="Card" parent="DiagonalContainer" instance=ExtResource( 2 )]
+margin_right = 224.0
+margin_bottom = 288.0
+
+[node name="Card2" parent="DiagonalContainer" instance=ExtResource( 2 )]
+margin_left = 191.0
+margin_top = 105.0
+margin_right = 415.0
+margin_bottom = 393.0
+
+[node name="Card3" parent="DiagonalContainer" instance=ExtResource( 2 )]
+margin_left = 382.0
+margin_top = 210.0
+margin_right = 606.0
+margin_bottom = 498.0
+
+[node name="Card4" parent="DiagonalContainer" instance=ExtResource( 2 )]
+margin_left = 573.0
+margin_top = 315.0
+margin_right = 797.0
+margin_bottom = 603.0
+
+[node name="Card5" parent="DiagonalContainer" instance=ExtResource( 2 )]
+margin_left = 764.0
+margin_top = 420.0
+margin_right = 988.0
+margin_bottom = 708.0

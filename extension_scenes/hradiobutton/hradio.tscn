@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://extension_scenes/hradiobutton/hradio.gd" type="Script" id=1]
+
+[node name="HRadio" type="Panel"]
+margin_right = 333.0
+margin_bottom = 93.0
+rect_min_size = Vector2( 52, 36 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "To prevent  players from choosing \"none\" as an option, untick the \"Allow None\" box.
+
+To alter the text on buttons, and to alter the String passed in the \"choice\" signal, edit the Strings in the Choices array here. The button text and the passed String are the same for simplicity.
+
+If you want more choices, add more buttons, and adjust the \"match option\" statement accordingly. It is ultimately up to you how more than 2 buttons should be implemented. Keep \"allow none\" on if you have more than 2 options."
+}
+allow_none = false
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 52, 36 )
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="HBoxContainer" parent="Margin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 325.0
+margin_bottom = 85.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="Button" parent="Margin/Container"]
+margin_right = 154.0
+margin_bottom = 77.0
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Left"
+clip_text = true
+
+[node name="Right" type="Button" parent="Margin/Container"]
+margin_left = 162.0
+margin_right = 317.0
+margin_bottom = 77.0
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Right"
+clip_text = true
