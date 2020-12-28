@@ -17,6 +17,7 @@ export var individual_margins: Dictionary = {
 enum editing {
 	H,
 	V,
+	NONE,
 }
 var currently_editing: int = editing.H # to allow h or v to be adjusted without overwriting the other's individual margins
 
@@ -41,12 +42,13 @@ func edit_use_indie_margins(edit:bool):
 		_on_sort_children()
 
 func edit_individual_margins(new_margins:Dictionary):
-	var old_margins = individual_margins
 	individual_margins["Left"] = new_margins["Left"]
 	individual_margins["Top"] = new_margins["Top"]
 	individual_margins["Right"] = new_margins["Right"]
 	individual_margins["Bottom"] = new_margins["Bottom"]
-	use_individual_margins = true
+	currently_editing = editing.NONE
+	if use_individual_margins == false:
+		return
 	var child_count = get_child_count()
 	for i in child_count:
 		var current_child = get_child(i)
@@ -59,17 +61,11 @@ func edit_individual_margins(new_margins:Dictionary):
 		current_child.margin_top = top_movement - (top_movement/2)
 		current_child.margin_bottom = -bottom_movement + (bottom_movement/2)
 		continue
-	print("Old: %s\nNew: %s" % [old_margins, new_margins])
-	if (old_margins["Left"] != new_margins["Left"]) or (old_margins["Right"] != new_margins["Right"]):
-		currently_editing = editing.H
-		print("H!")
-	if (old_margins["Top"] != new_margins["Top"]) or (old_margins["Bottom"] != new_margins["Bottom"]):
-		currently_editing = editing.V
-		print("V!")
 
 func _on_sort_children():
+	if use_individual_margins:
+		return
 	var child_count = get_child_count()
-	use_individual_margins = false
 	for i in child_count:
 		var current_child = get_child(i)
 		current_child.set_anchors_preset(Control.PRESET_WIDE)

@@ -10,46 +10,56 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Container" type="Container" parent="."]
+[node name="PercentMarginContainer" type="Container" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 114.0
-margin_right = -42.0
-margin_bottom = -90.0
+margin_top = 49.0
+margin_right = -74.0
+margin_bottom = 68.0
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
-use_individual_margins = true
+horizontal_margin = 0.899
+vertical_margin = 0.741
 individual_margins = {
-"Bottom": 1.0,
-"Left": 1.0,
-"Right": 1.0,
-"Top": 1.0
+"Bottom": 0.741,
+"Left": 0.899,
+"Right": 0.899,
+"Top": 0.741
 }
 
-[node name="ColorRect" type="ColorRect" parent="Container"]
+[node name="ColorRect4" type="ColorRect" parent="PercentMarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 1, 0, 0, 0.313726 )
-
-[node name="TextureRect" type="TextureRect" parent="Container/ColorRect"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_min_size = Vector2( 16, 0 )
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect4" type="ColorRect" parent="Container"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_left = 47.975
+margin_top = 80.1605
+margin_right = -47.975
+margin_bottom = -80.1605
 color = Color( 0, 0, 1, 0.313726 )
 
-[node name="TextureRect" type="TextureRect" parent="Container/ColorRect4"]
+[node name="TextureRect" type="TextureRect" parent="PercentMarginContainer/ColorRect4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 16, 0 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PercentMarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 47.975
+margin_top = 80.1605
+margin_right = -47.975
+margin_bottom = -80.1605
+color = Color( 1, 0, 0, 0.313726 )
+
+[node name="TextureRect" type="TextureRect" parent="PercentMarginContainer/ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 16, 0 )
@@ -60,71 +70,83 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect2" type="ColorRect" parent="Container"]
+[node name="ColorRect2" type="ColorRect" parent="PercentMarginContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 47.975
+margin_top = 80.1605
+margin_right = -47.975
+margin_bottom = -80.1605
 
-[node name="ColorRect3" type="ColorRect" parent="Container"]
+[node name="ColorRect3" type="ColorRect" parent="PercentMarginContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 47.975
+margin_top = 80.1605
+margin_right = -47.975
+margin_bottom = -80.1605
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PercentMarginContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 47.975
+margin_top = 80.1605
+margin_right = -47.975
+margin_bottom = -80.1605
 custom_constants/separation = 14
 
-[node name="ColorRect" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_right = 460.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
-[node name="ColorRect2" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect2" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_top = 30.0
 margin_right = 460.0
 margin_bottom = 46.0
 rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
-[node name="ColorRect3" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect3" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_top = 60.0
 margin_right = 460.0
 margin_bottom = 76.0
 rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
-[node name="ColorRect4" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect4" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_top = 90.0
 margin_right = 460.0
 margin_bottom = 106.0
 rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
-[node name="ColorRect5" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect5" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_top = 120.0
 margin_right = 460.0
 margin_bottom = 136.0
 rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
-[node name="ColorRect6" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect6" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_top = 150.0
 margin_right = 460.0
 margin_bottom = 166.0
 rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
-[node name="ColorRect7" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect7" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_top = 180.0
 margin_right = 460.0
 margin_bottom = 196.0
 rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
-[node name="ColorRect8" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="ColorRect8" type="ColorRect" parent="PercentMarginContainer/VBoxContainer"]
 margin_top = 210.0
 margin_right = 460.0
 margin_bottom = 226.0
@@ -132,4 +154,4 @@ rect_min_size = Vector2( 16, 16 )
 color = Color( 0.027451, 0.27451, 0.792157, 1 )
 
 [node name="Reader" type="Label" parent="."]
-[connection signal="sort_children" from="Container" to="Container" method="_on_sort_children"]
+[connection signal="sort_children" from="PercentMarginContainer" to="PercentMarginContainer" method="_on_sort_children"]
