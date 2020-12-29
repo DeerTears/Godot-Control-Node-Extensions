@@ -1,28 +1,20 @@
 tool
-
 extends Container
+class_name PercentMarginContainer
 
 export (float, 0.0, 1.0, 0.001) var horizontal_margin = 1.0 setget edit_horizontal_margin
 export (float, 0.0, 1.0, 0.001) var vertical_margin = 1.0 setget edit_vertical_margin
 
 export var use_individual_margins: bool = false setget edit_use_indie_margins
-
 export var individual_margins: Dictionary = {
-	"Left":1.0,
-	"Right":1.0,
-	"Top":1.0,
-	"Bottom":1.0,
+	"Left":		1.0,
+	"Right":	1.0,
+	"Top":		1.0,
+	"Bottom":	1.0,
 } setget edit_individual_margins
 
-enum editing {
-	H,
-	V,
-	NONE,
-}
-var currently_editing: int = editing.H # to allow h or v to be adjusted without overwriting the other's individual margins
-
-func _ready():
-	print(individual_margins)
+enum editing {H, V, NONE,}
+var currently_editing: int = editing.H
 
 func edit_horizontal_margin(input:float):
 	horizontal_margin = input
@@ -34,9 +26,9 @@ func edit_vertical_margin(input:float):
 	currently_editing = editing.V
 	_on_sort_children()
 
-func edit_use_indie_margins(edit:bool):
-	use_individual_margins = edit
-	if edit:
+func edit_use_indie_margins(input:bool):
+	use_individual_margins = input
+	if input:
 		edit_individual_margins(individual_margins)
 	else:
 		_on_sort_children()
@@ -63,7 +55,7 @@ func edit_individual_margins(new_margins:Dictionary):
 		continue
 
 func _on_sort_children():
-	if use_individual_margins:
+	if use_individual_margins == true:
 		return
 	var child_count = get_child_count()
 	for i in child_count:
@@ -80,6 +72,8 @@ func _on_sort_children():
 
 func update_individual_margins():
 	match currently_editing:
+		editing.NONE:
+			return
 		editing.H:
 			individual_margins["Left"] = horizontal_margin
 			individual_margins["Right"] = horizontal_margin

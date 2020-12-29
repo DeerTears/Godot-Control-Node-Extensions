@@ -12,7 +12,12 @@ _global_script_classes=[ {
 "base": "Panel",
 "class": "HRadioButton",
 "language": "GDScript",
-"path": "res://extension_scenes/hradiobutton/hradio.gd"
+"path": "res://extension_scenes/hradiobutton/HRadio.gd"
+}, {
+"base": "Container",
+"class": "PercentMarginContainer",
+"language": "GDScript",
+"path": "res://extension_scenes/percentmargincontainer/percentmargincontainer.gd"
 }, {
 "base": "Panel",
 "class": "VRadioButton",
@@ -21,6 +26,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "HRadioButton": "",
+"PercentMarginContainer": "",
 "VRadioButton": ""
 }
 

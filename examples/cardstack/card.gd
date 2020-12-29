@@ -75,3 +75,12 @@ func update_labels(passed_type:int):
 			name_label.text = "GRASS"
 			desc_label.text = "is grass."
 		
+
+
+func _on_Card_mouse_entered():
+	$Ping.emitting = true
+	$Magic.emitting = true
+
+func _on_Card_mouse_exited():
+	$Magic.emitting = false
+	$Ping.emitting = false
