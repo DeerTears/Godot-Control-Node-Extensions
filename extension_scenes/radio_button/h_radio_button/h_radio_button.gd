@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 class_name HRadioButton # Two horizontal buttons that can't be both selected, allowing "none" as an option.
 signal choice
 

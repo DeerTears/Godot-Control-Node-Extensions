@@ -10,8 +10,6 @@ var first_child_minimum_x = 0
 # so far I can't fix this issue, replacing 0 in the lerp with the child's minimum size is not the answer.
 
 func edit_split_percent(amount:float):
-	if Engine.is_editor_hint() == false:
-		return
 	split_percent = amount
 	var movement = lerp(0.0, rect_size.x, amount)
 	split_offset = movement
@@ -19,3 +17,4 @@ func edit_split_percent(amount:float):
 func _on_HSplitPercent_sort_children():
 	var movement = lerp(0.0, rect_size.x, split_percent)
 	split_offset = movement
+	print("%s, %s" % [split_offset, movement])

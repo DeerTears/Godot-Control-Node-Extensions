@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Panel",
+"base": "Control",
 "class": "HRadioButton",
 "language": "GDScript",
 "path": "res://extension_scenes/radio_button/h_radio_button/h_radio_button.gd"
@@ -24,7 +24,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://extension_scenes/percent_margin/percent_margin.gd"
 }, {
-"base": "Panel",
+"base": "Control",
 "class": "VRadioButton",
 "language": "GDScript",
 "path": "res://extension_scenes/radio_button/v_radio_button/v_radio_button.gd"

@@ -1,5 +1,3 @@
-tool
-
 extends Control
 
 export var left_to_right: bool = true
