@@ -1,0 +1,315 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://extension_scenes/split_percent/h_split_percent/h_split_percent.gd" type="Script" id=1]
+[ext_resource path="res://extension_scenes/percent_margin/percent_margin.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PercentMarginContainer" type="Container" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+horizontal_margin = 0.95
+vertical_margin = 0.9
+individual_margins = {
+"Bottom": 0.9,
+"Left": 0.95,
+"Right": 0.95,
+"Top": 0.9
+}
+
+[node name="Panel" type="Panel" parent="PercentMarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.6
+margin_top = 30.0
+margin_right = -25.6
+margin_bottom = -30.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="PercentMarginContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="VBoxContainer" parent="PercentMarginContainer/Panel/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 964.0
+margin_bottom = 532.0
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="PercentMarginContainer/Panel/MarginContainer/Content"]
+margin_right = 956.0
+margin_bottom = 14.0
+size_flags_vertical = 1
+text = "Welcome to Website"
+align = 1
+valign = 1
+
+[node name="Navbar" type="HBoxContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content"]
+margin_top = 30.0
+margin_right = 956.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Home" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Navbar"]
+margin_right = 308.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Home"
+
+[node name="Store" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Navbar"]
+margin_left = 324.0
+margin_right = 632.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Store"
+
+[node name="Contact" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Navbar"]
+margin_left = 648.0
+margin_right = 956.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Contact"
+
+[node name="Showcase" type="HSplitContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content"]
+margin_top = 66.0
+margin_right = 956.0
+margin_bottom = 488.0
+size_flags_vertical = 3
+split_offset = 85
+dragger_visibility = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+split_percent = 0.089
+
+[node name="MarginContainer" type="MarginContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase"]
+margin_right = 277.0
+margin_bottom = 422.0
+custom_constants/margin_right = 16
+custom_constants/margin_left = 16
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer"]
+margin_left = 16.0
+margin_right = 261.0
+margin_bottom = 422.0
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Album" type="GridContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer"]
+margin_right = 245.0
+margin_bottom = 422.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_constants/vseparation = 8
+custom_constants/hseparation = 8
+columns = 2
+
+[node name="ColorRect" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+margin_right = 225.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="Button3" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+margin_left = 233.0
+margin_right = 245.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 0, 140 )
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="ColorRect2" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="ColorRect7" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="Button4" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 140 )
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="ColorRect3" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="ColorRect5" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="Button2" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 140 )
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="ColorRect4" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="ColorRect6" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="Button" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 187.0
+rect_min_size = Vector2( 0, 140 )
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="ColorRect8" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 234.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="ColorRect9" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 140.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 140, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.486275, 0.721569, 1 )
+
+[node name="Button5" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
+visible = false
+margin_right = 12.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 140 )
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="HighlightPanel" type="Panel" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase"]
+margin_left = 277.0
+margin_right = 956.0
+margin_bottom = 422.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/HighlightPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/HighlightPanel/MarginContainer"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 647.0
+margin_bottom = 390.0
+custom_constants/separation = 32
+
+[node name="Description" type="Label" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/HighlightPanel/MarginContainer/HBoxContainer"]
+margin_right = 455.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses! Lots of stuff to know about and to figure out in these exciting times! Find out more as the story progresses!"
+autowrap = true
+clip_text = true
+
+[node name="EnlargedImage" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/HighlightPanel/MarginContainer/HBoxContainer"]
+margin_left = 487.0
+margin_top = 51.0
+margin_right = 615.0
+margin_bottom = 307.0
+rect_min_size = Vector2( 128, 256 )
+size_flags_vertical = 4
+
+[node name="Footer" type="HBoxContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content"]
+margin_top = 504.0
+margin_right = 956.0
+margin_bottom = 524.0
+size_flags_horizontal = 3
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="PercentMarginContainer/Panel/MarginContainer/Content/Footer"]
+margin_top = 3.0
+margin_right = 375.0
+margin_bottom = 17.0
+text = "All rights reserved @2020. This is not really a real website."
+
+[node name="Legal" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Footer"]
+margin_left = 892.0
+margin_right = 956.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 64, 0 )
+size_flags_horizontal = 10
+text = "Legal"
+[connection signal="sort_children" from="PercentMarginContainer/Panel/MarginContainer/Content/Showcase" to="PercentMarginContainer/Panel/MarginContainer/Content/Showcase" method="_on_HSplitPercent_sort_children"]

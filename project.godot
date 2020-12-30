@@ -12,7 +12,12 @@ _global_script_classes=[ {
 "base": "Panel",
 "class": "HRadioButton",
 "language": "GDScript",
-"path": "res://extension_scenes/h_radio_button/h_radio_button.gd"
+"path": "res://extension_scenes/radio_button/h_radio_button/h_radio_button.gd"
+}, {
+"base": "HSplitContainer",
+"class": "HSplitPercent",
+"language": "GDScript",
+"path": "res://extension_scenes/split_percent/h_split_percent/h_split_percent.gd"
 }, {
 "base": "Container",
 "class": "PercentMarginContainer",
@@ -22,12 +27,19 @@ _global_script_classes=[ {
 "base": "Panel",
 "class": "VRadioButton",
 "language": "GDScript",
-"path": "res://extension_scenes/v_radio_button/v_radio_button.gd"
+"path": "res://extension_scenes/radio_button/v_radio_button/v_radio_button.gd"
+}, {
+"base": "VSplitContainer",
+"class": "VSplitPercent",
+"language": "GDScript",
+"path": "res://extension_scenes/split_percent/h_split_percent/v_split_percent.gd"
 } ]
 _global_script_class_icons={
 "HRadioButton": "",
+"HSplitPercent": "",
 "PercentMarginContainer": "",
-"VRadioButton": ""
+"VRadioButton": "",
+"VSplitPercent": ""
 }
 
 [application]

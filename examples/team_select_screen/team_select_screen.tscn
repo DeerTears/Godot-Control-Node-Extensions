@@ -2,7 +2,7 @@
 
 [ext_resource path="res://examples/team_select_screen/team_select_screen.gd" type="Script" id=1]
 [ext_resource path="res://examples/team_select_screen/notice_popup.gd" type="Script" id=2]
-[ext_resource path="res://extension_scenes/h_radio_button/h_radio_button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://extension_scenes/radio_button/h_radio_button/h_radio_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://examples/team_select_screen/teampicker.gd" type="Script" id=4]
 [ext_resource path="res://extension_scenes/percent_margin/percent_margin.gd" type="Script" id=5]
 

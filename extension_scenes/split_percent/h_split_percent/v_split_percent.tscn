@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://extension_scenes/split_percent/h_split_percent/v_split_percent.gd" type="Script" id=1]
+
+[node name="VSplitPercent" type="VSplitContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://extension_scenes/v_radio_button/v_radio_button.gd" type="Script" id=1]
+[ext_resource path="res://extension_scenes/radio_button/h_radio_button/h_radio_button.gd" type="Script" id=1]
 
-[node name="VRadioButton" type="Panel"]
-margin_right = 262.0
-margin_bottom = 119.0
-rect_min_size = Vector2( 52, 64 )
+[node name="HRadioButton" type="Panel"]
+margin_right = 333.0
+margin_bottom = 93.0
+rect_min_size = Vector2( 52, 36 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -15,11 +15,12 @@ To alter the text on buttons, and to alter the String passed in the \"choice\" s
 
 If you want more choices, add more buttons, and adjust the \"match option\" statement accordingly. It is ultimately up to you how more than 2 buttons should be implemented. Keep \"allow none\" on if you have more than 2 options."
 }
+allow_none = false
 
 [node name="Margin" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 52, 64 )
+rect_min_size = Vector2( 52, 36 )
 custom_constants/margin_right = 8
 custom_constants/margin_top = 8
 custom_constants/margin_left = 8
@@ -28,28 +29,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Container" type="VBoxContainer" parent="Margin"]
+[node name="Container" type="HBoxContainer" parent="Margin"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 254.0
-margin_bottom = 111.0
+margin_right = 325.0
+margin_bottom = 85.0
 custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Top" type="Button" parent="Margin/Container"]
-margin_right = 246.0
-margin_bottom = 47.0
+[node name="Left" type="Button" parent="Margin/Container"]
+margin_right = 154.0
+margin_bottom = 77.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
 toggle_mode = true
-text = "Top"
+text = "Left"
 clip_text = true
 
-[node name="Bottom" type="Button" parent="Margin/Container"]
-margin_top = 55.0
-margin_right = 246.0
-margin_bottom = 103.0
+[node name="Right" type="Button" parent="Margin/Container"]
+margin_left = 162.0
+margin_right = 317.0
+margin_bottom = 77.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
 toggle_mode = true
-text = "Bottom"
+text = "Right"
 clip_text = true
