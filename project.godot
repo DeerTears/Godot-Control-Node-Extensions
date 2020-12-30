@@ -12,17 +12,17 @@ _global_script_classes=[ {
 "base": "Panel",
 "class": "HRadioButton",
 "language": "GDScript",
-"path": "res://extension_scenes/hradiobutton/HRadio.gd"
+"path": "res://extension_scenes/h_radio_button/h_radio_button.gd"
 }, {
 "base": "Container",
 "class": "PercentMarginContainer",
 "language": "GDScript",
-"path": "res://extension_scenes/percentmargincontainer/percentmargincontainer.gd"
+"path": "res://extension_scenes/percent_margin/percent_margin.gd"
 }, {
 "base": "Panel",
 "class": "VRadioButton",
 "language": "GDScript",
-"path": "res://extension_scenes/vradiobutton/vradio.gd"
+"path": "res://extension_scenes/v_radio_button/v_radio_button.gd"
 } ]
 _global_script_class_icons={
 "HRadioButton": "",

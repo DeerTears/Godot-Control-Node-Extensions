@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://extension_scenes/hradiobutton/HRadio.gd" type="Script" id=1]
+[ext_resource path="res://extension_scenes/h_radio_button/h_radio_button.gd" type="Script" id=1]
 
-[node name="HRadio" type="Panel"]
+
+[node name="HRadioButton" type="Panel"]
 margin_right = 333.0
 margin_bottom = 93.0
 rect_min_size = Vector2( 52, 36 )

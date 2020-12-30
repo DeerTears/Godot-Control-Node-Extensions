@@ -11,7 +11,7 @@ func _ready():
 	flag.color = Color.gray
 	join_button.set_disabled(true)
 
-func _on_HRadio_choice(option:String):
+func _on_HRadioButton_choice(option:String):
 	match option:
 		"Red":
 			flag.color = Color.darkred

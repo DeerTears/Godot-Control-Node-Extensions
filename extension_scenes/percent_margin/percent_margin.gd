@@ -19,19 +19,19 @@ var currently_editing: int = editing.H
 func edit_horizontal_margin(input:float):
 	horizontal_margin = input
 	currently_editing = editing.H
-	_on_sort_children()
+	_on_PercentMargin_sort_children()
 
 func edit_vertical_margin(input:float):
 	vertical_margin = input
 	currently_editing = editing.V
-	_on_sort_children()
+	_on_PercentMargin_sort_children()
 
 func edit_use_indie_margins(input:bool):
 	use_individual_margins = input
 	if input:
 		edit_individual_margins(individual_margins)
 	else:
-		_on_sort_children()
+		_on_PercentMargin_sort_children()
 
 func edit_individual_margins(new_margins:Dictionary):
 	individual_margins["Left"] = new_margins["Left"]
@@ -54,7 +54,7 @@ func edit_individual_margins(new_margins:Dictionary):
 		current_child.margin_bottom = -bottom_movement + (bottom_movement/2)
 		continue
 
-func _on_sort_children():
+func _on_PercentMargin_sort_children():
 	if use_individual_margins == true:
 		return
 	var child_count = get_child_count()
