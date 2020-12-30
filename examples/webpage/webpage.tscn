@@ -112,7 +112,8 @@ split_offset = 94
 dragger_visibility = 2
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": "This isn't working the way I wanted it to :("
 }
 split_percent = 0.1
 

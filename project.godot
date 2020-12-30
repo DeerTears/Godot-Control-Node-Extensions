@@ -45,6 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ControlExtensions"
+config/description="A collection of custom control nodes made in my spare time."
 run/main_scene="res://examples/team_select_screen/team_select_screen.tscn"
 config/icon="res://icon.png"
 
