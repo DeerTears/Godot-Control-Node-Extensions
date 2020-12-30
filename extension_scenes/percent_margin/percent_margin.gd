@@ -1,6 +1,6 @@
 tool
 extends Container
-class_name PercentMarginContainer
+class_name PercentMargin
 
 export (float, 0.0, 1.0, 0.001) var horizontal_margin = 1.0 setget edit_horizontal_margin
 export (float, 0.0, 1.0, 0.001) var vertical_margin = 1.0 setget edit_vertical_margin
@@ -15,6 +15,10 @@ export var individual_margins: Dictionary = {
 
 enum editing {H, V, NONE,}
 var currently_editing: int = editing.H
+
+func _init():
+	if is_connected("sort_children",self,"_on_PercentMargin_sort_children") == false:
+		connect("sort_children",self,"_on_PercentMargin_sort_children")
 
 func edit_horizontal_margin(input:float):
 	horizontal_margin = input

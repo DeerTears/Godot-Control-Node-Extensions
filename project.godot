@@ -20,7 +20,7 @@ _global_script_classes=[ {
 "path": "res://extension_scenes/split_percent/h_split_percent/h_split_percent.gd"
 }, {
 "base": "Container",
-"class": "PercentMarginContainer",
+"class": "PercentMargin",
 "language": "GDScript",
 "path": "res://extension_scenes/percent_margin/percent_margin.gd"
 }, {
@@ -37,7 +37,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "HRadioButton": "",
 "HSplitPercent": "",
-"PercentMarginContainer": "",
+"PercentMargin": "",
 "VRadioButton": "",
 "VSplitPercent": ""
 }
