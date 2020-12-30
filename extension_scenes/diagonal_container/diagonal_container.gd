@@ -22,11 +22,3 @@ func sort_children():
 	else:
 		for i in child_count:
 			get_child(i).rect_position.y = self.rect_size.y - (step.y * i)
-#	color_children()
-
-func color_children():
-	var child_count = get_child_count()
-	var rand_color = Color(randf(), randf(), randf())
-	for i in child_count:
-		rand_color.v += i/(child_count/2)
-		get_child(i).color = rand_color
