@@ -101,29 +101,27 @@ margin_top = 66.0
 margin_right = 956.0
 margin_bottom = 488.0
 size_flags_vertical = 3
-split_offset = 85
 dragger_visibility = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-split_percent = 0.089
 
 [node name="MarginContainer" type="MarginContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase"]
-margin_right = 277.0
+margin_right = 192.0
 margin_bottom = 422.0
 custom_constants/margin_right = 16
 custom_constants/margin_left = 16
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer"]
 margin_left = 16.0
-margin_right = 261.0
+margin_right = 176.0
 margin_bottom = 422.0
 follow_focus = true
 scroll_horizontal_enabled = false
 
 [node name="Album" type="GridContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer"]
-margin_right = 245.0
+margin_right = 160.0
 margin_bottom = 422.0
 size_flags_horizontal = 7
 size_flags_vertical = 3
@@ -132,7 +130,7 @@ custom_constants/hseparation = 8
 columns = 2
 
 [node name="ColorRect" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
-margin_right = 225.0
+margin_right = 140.0
 margin_bottom = 374.0
 rect_min_size = Vector2( 140, 140 )
 size_flags_horizontal = 3
@@ -140,8 +138,8 @@ size_flags_vertical = 3
 color = Color( 0, 0.486275, 0.721569, 1 )
 
 [node name="Button3" type="Button" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/MarginContainer/ScrollContainer/Album"]
-margin_left = 233.0
-margin_right = 245.0
+margin_left = 148.0
+margin_right = 160.0
 margin_bottom = 374.0
 rect_min_size = Vector2( 0, 140 )
 icon = ExtResource( 3 )
@@ -252,7 +250,7 @@ icon = ExtResource( 3 )
 expand_icon = true
 
 [node name="HighlightPanel" type="Panel" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase"]
-margin_left = 277.0
+margin_left = 192.0
 margin_right = 956.0
 margin_bottom = 422.0
 
@@ -270,12 +268,12 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/HighlightPanel/MarginContainer"]
 margin_left = 32.0
 margin_top = 32.0
-margin_right = 647.0
+margin_right = 732.0
 margin_bottom = 390.0
 custom_constants/separation = 32
 
 [node name="Description" type="Label" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/HighlightPanel/MarginContainer/HBoxContainer"]
-margin_right = 455.0
+margin_right = 540.0
 margin_bottom = 358.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -284,9 +282,9 @@ autowrap = true
 clip_text = true
 
 [node name="EnlargedImage" type="ColorRect" parent="PercentMarginContainer/Panel/MarginContainer/Content/Showcase/HighlightPanel/MarginContainer/HBoxContainer"]
-margin_left = 487.0
+margin_left = 572.0
 margin_top = 51.0
-margin_right = 615.0
+margin_right = 700.0
 margin_bottom = 307.0
 rect_min_size = Vector2( 128, 256 )
 size_flags_vertical = 4
