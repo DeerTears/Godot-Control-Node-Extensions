@@ -3,19 +3,32 @@
 This repository contains all of the experiments and extensions I've made for Control nodes in Godot.
 
 Quick Navigation:
+- [Folder Guide](#folder-guide)
 - [Containers](#containers)
 	- [PercentMargin](#percentmargin)
 		- [PercentMargin Variables](#percentmargin-variables)
 		- [PercentMargin Notes](#percentmargin-notes)
 		- [PercentMargin Issues](#percentmargin-issues)
 - [Nodes](#nodes)
-	- [RadioButton (H/V)](#RadioButton-(h/v)) <!-- please work with a slash in there thanks -->
+	- [RadioButton (H/V)](#RadioButton-hv) <!-- please work with a slash in there thanks -->
 		- [RadioButton Variables](#RadioButton-variables)
 		- [RadioButton Notes](#RadioButton-notes)
 		- [RadioButton Issues](#RadioButton-issues)
 	- [DiagonalContainer](#DiagonalContainer)
 		- [DiagonalContainer Variables](#DiagonalContainer-variables)
 		- [DiagonalContainer Issues](#DiagonalContainer-issues)
+
+## Folder Guide
+
+**examples** - This folder demonstrates using my custom extensions in different scenarios. This folder contains "example_selection.tscn", the default scene for this project, which lets you navigate between examples.
+
+Individual examples include:
+
+- **cardstack**: A mock cardgame, showcasing the DiagonalContainer.
+- **team_select_screen**: A team select screen for a multiplayer game, showcasing the HRadioButton.
+- **webpage**: A mock webpage made in Godot, attempting to showcase the HPercentSeparator.
+
+**extension_scenes** - A folder containing subfolders with each of my custom nodes. This folder may be renamed in the future since not all of these Extensions are technically "scenes" anymore.
 
 ## Containers
 
@@ -27,18 +40,18 @@ A quick overview of all containers:
 - DiagonalContainer
 
 ### PercentMargin
-A simpler, faster MarginContainer for CSS nerds.
+**A simpler, faster MarginContainer for CSS nerds.**  
 PercentMargin gives you two sliders to adjust the horizontal and vertical margins based on a percentage rather than an absolute pixel value. The size of the children will adjust appropriately as this container gets resized.
 
 #### PercentMargin Variables
 
-"Horizontal Margin" - A slider that changes the multiplier of the children's horizontal margin. The slider goes from 0.000 to 1.000 in steps of 0.001. Use individual margins for more precision if needed.
+**Horizontal Margin** - A slider that changes the multiplier of the children's horizontal margin. The slider goes from 0.000 to 1.000 in steps of 0.001. Use individual margins for more precision if needed.
 
-"Vertical Margin" - A slider that changes the multiplier of the children's vertical margin. The slider goes from 0.000 to 1.000 in steps of 0.001. Use individual margins for more precision if needed.
+**Vertical Margin** - A slider that changes the multiplier of the children's vertical margin. The slider goes from 0.000 to 1.000 in steps of 0.001. Use individual margins for more precision if needed.
 
-"Individual Margins" - A dictionary that allows each margin multiplier: `left`, `right`, `top`, `bottom`, to be adjusted as needed. The changes made in this dictionary will not take effect until "Use Individual Margins" is checked. **I reccomend you close this dictionary once you are finished adjusting its values.** The dictionary values will not accurately update if "Use Individual Margins" is unchecked and the sliders are used once again.
+**Individual Margins** - A dictionary that allows each margin multiplier: `left`, `right`, `top`, `bottom`, to be adjusted as needed. The changes made in this dictionary will not take effect until "Use Individual Margins" is checked. **I reccomend you close this dictionary once you are finished adjusting its values.** The dictionary values will not accurately update if "Use Individual Margins" is unchecked and the sliders are used once again.
 
-"Use Individual Margins" - A checkbox that toggles which numbers the PercentMargin uses as the margins for its children. Checking this box will use the numbers kept in the Individual Margins dictionary, while unchecking this box will refer to the slider values. Keeping this box checked will prevent the sliders from updating the Individual Margins.
+**Use Individual Margins** - A checkbox that toggles which numbers the PercentMargin uses as the margins for its children. Checking this box will use the numbers kept in the Individual Margins dictionary, while unchecking this box will refer to the slider values. Keeping this box checked will prevent the sliders from updating the Individual Margins.
 
 #### PercentMargin Notes
 
@@ -54,20 +67,21 @@ The current numbers can be reflected in the inspector by clicking on the Diction
 
 ## Nodes
 
-All these nodes require instancing a .tscn file to function because they rely on set child nodes.
+All these nodes require instancing a .tscn file to function because they rely on pre-determined child nodes.
 
 ### RadioButton (H/V)
-Two stronger customizable CheckButton-style nodes that use two button nodes instead of Godot's modern radio button approach. Both buttons can have their functionality in relation to one another adjusted using this node's variables. They emit a `choice()` signal that can be connected to find the option that was selected.
+**A stronger, more-customizable CheckButton-style node that uses two button nodes instead of a single modified button.**  
+RadioButton comes in 2 forms, HRadioButton and VRadioButton. For each node, the buttons can be toggled on or off in relation to eachother, so that only one button is active at a time. This node emits a `choice()` signal that can be connected to find the option that was selected.
 
 This node does not natively support more than 2 choices, but it provides some stronger groundwork to allow for it.
 
 #### RadioButton Variables
 
-"Allow None" - Lets users deselect their current choice and to go back to a neutral state. This passes the string "none" in the `choice()` signal.
+**Allow None** - Lets users deselect their current choice and to go back to a neutral state. This passes the string "none" in the `choice()` signal.
 
-"Disable Current Choice" - Prevents users from re-toggling the choice they just made, forcing them to press the opposite button instead.
+**Disable Current Choice** - Prevents users from re-toggling the choice they just made, forcing them to press the opposite button instead.
 
-"Choices" - An array that contains the text and passed string of each button respectively. This is where the button text and signals should be edited.
+**Choices** - An array that contains the text and passed string of each button respectively. This is where the button text and signals should be edited.
 
 #### RadioButton Notes
 
@@ -84,14 +98,14 @@ The signal and text are unified for simplicity, but this does not consider butto
 Pressing a button does not automatically move focus over to the other button, so keyboard/controller users will have their focus placed on top of a disabled button. This behaviour will be changed in the future.
 
 ### DiagonalContainer
-
-A silly container for stacking control nodes diagonally.
+**A silly container for stacking control nodes diagonally.**  
+Made as a joke, and justified after the fact, my goal is to create an HBox/VBox-type container that stacks control nodes diagonally. This node was made more with artists in mind, rather than UX designers.
 
 #### DiagonalContainer Variables
 
-"Left to Right" - When checked, the container arranges the children 0+ from left to right within this container's bounds. When unchecked, the children are arranged from right to left.
+**Left to Right** - When checked, the container arranges the children 0+ from left to right within this container's bounds. When unchecked, the children are arranged from right to left.
 
-"Top to Bottom" - When checked, the container arranges the children 0+ from top to bottom within this container's bounds. When unchecked, the children are arranged from bottom to top.
+**Top to Bottom** - When checked, the container arranges the children 0+ from top to bottom within this container's bounds. When unchecked, the children are arranged from bottom to top.
 
 #### DiagonalContainer Issues
 
