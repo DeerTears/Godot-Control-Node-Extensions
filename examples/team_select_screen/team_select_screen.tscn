@@ -12,6 +12,7 @@ bg_color = Color( 0.0666667, 0, 0.223529, 1 )
 [node name="TeamSelectScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -6.10352e-05
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -33,16 +34,22 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
+horizontal_margin = 0.9
+vertical_margin = 0.9
 individual_margins = {
-"Bottom": 1.0,
-"Left": 1.0,
-"Right": 1.0,
-"Top": 1.0
+"Bottom": 0.9,
+"Left": 0.9,
+"Right": 0.9,
+"Top": 0.9
 }
 
 [node name="TeamPicker" type="VBoxContainer" parent="PercentMargin"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 51.2
+margin_top = 30.0
+margin_right = -51.2
+margin_bottom = -30.0
 custom_constants/separation = 16
 script = ExtResource( 4 )
 __meta__ = {
@@ -50,7 +57,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="PercentMargin/TeamPicker"]
-margin_right = 1024.0
+margin_right = 921.0
 margin_bottom = 14.0
 text = "Choose Your Team"
 align = 1
@@ -61,16 +68,16 @@ __meta__ = {
 
 [node name="Margin" type="MarginContainer" parent="PercentMargin/TeamPicker"]
 margin_top = 30.0
-margin_right = 1024.0
-margin_bottom = 267.0
+margin_right = 921.0
+margin_bottom = 237.0
 size_flags_vertical = 3
 custom_constants/margin_right = 16
 custom_constants/margin_left = 16
 
 [node name="Flag" type="ColorRect" parent="PercentMargin/TeamPicker/Margin"]
 margin_left = 16.0
-margin_right = 1008.0
-margin_bottom = 237.0
+margin_right = 905.0
+margin_bottom = 207.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.75, 0.75, 0.75, 1 )
@@ -79,17 +86,17 @@ __meta__ = {
 }
 
 [node name="HRadioButton" parent="PercentMargin/TeamPicker" instance=ExtResource( 3 )]
-margin_top = 283.0
-margin_right = 1024.0
-margin_bottom = 520.0
+margin_top = 253.0
+margin_right = 921.0
+margin_bottom = 460.0
 size_flags_vertical = 3
 allow_none = true
 choices = [ "Red", "Blue" ]
 
 [node name="Join" type="Button" parent="PercentMargin/TeamPicker"]
-margin_top = 536.0
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_top = 476.0
+margin_right = 921.0
+margin_bottom = 540.0
 rect_min_size = Vector2( 0, 64 )
 text = "Join!"
 
