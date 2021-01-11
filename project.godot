@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://extension_scenes/percent_margin/percent_margin.gd"
 }, {
+"base": "Container",
+"class": "SliderMargin",
+"language": "GDScript",
+"path": "res://newpm.gd"
+}, {
 "base": "Control",
 "class": "VRadioButton",
 "language": "GDScript",
@@ -38,6 +43,7 @@ _global_script_class_icons={
 "HRadioButton": "",
 "HSplitPercent": "",
 "PercentMargin": "",
+"SliderMargin": "",
 "VRadioButton": "",
 "VSplitPercent": ""
 }
