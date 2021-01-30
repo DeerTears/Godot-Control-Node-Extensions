@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://extension_scenes/ninepatch_margin/ninepatch_margin.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="NinePatchMargin" type="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 9.0
+margin_right = -66.0
+margin_bottom = -42.0
+texture = ExtResource( 2 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.54902 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

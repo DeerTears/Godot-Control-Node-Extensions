@@ -17,6 +17,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+test = NodePath("PercentMargin/TeamPicker/Margin/Flag")
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
@@ -36,6 +37,7 @@ __meta__ = {
 }
 horizontal_margin = 0.9
 vertical_margin = 0.9
+use_individual_margins = false
 individual_margins = {
 "Bottom": 0.9,
 "Left": 0.9,

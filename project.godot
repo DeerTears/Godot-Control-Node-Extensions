@@ -19,15 +19,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://extension_scenes/split_percent/h_split_percent/h_split_percent.gd"
 }, {
+"base": "NinePatchRect",
+"class": "NinePatchMargin",
+"language": "GDScript",
+"path": "res://extension_scenes/ninepatch_margin/ninepatch_margin.gd"
+}, {
 "base": "Container",
 "class": "PercentMargin",
 "language": "GDScript",
 "path": "res://extension_scenes/percent_margin/percent_margin.gd"
 }, {
+"base": "Timer",
+"class": "SetGetTimer",
+"language": "GDScript",
+"path": "res://SetGetTest.gd"
+}, {
 "base": "Container",
 "class": "SliderMargin",
 "language": "GDScript",
-"path": "res://newpm.gd"
+"path": "res://extension_scenes/slider_margin/slider_margin.gd"
 }, {
 "base": "Control",
 "class": "VRadioButton",
@@ -42,7 +52,9 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "HRadioButton": "",
 "HSplitPercent": "",
+"NinePatchMargin": "",
 "PercentMargin": "",
+"SetGetTimer": "",
 "SliderMargin": "",
 "VRadioButton": "",
 "VSplitPercent": ""

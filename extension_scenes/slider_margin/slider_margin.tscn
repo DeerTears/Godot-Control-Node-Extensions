@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://extension_scenes/slider_margin/slider_margin.gd" type="Script" id=1]
+
+[node name="SliderMargin" type="Container"]
+margin_right = 32.0
+margin_bottom = 32.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
