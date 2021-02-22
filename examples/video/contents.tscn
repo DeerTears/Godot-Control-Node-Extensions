@@ -1,0 +1,383 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.145098, 0.145098, 0.145098, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="ColorRect" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.223529, 0.235294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 24
+custom_constants/margin_top = 24
+custom_constants/margin_left = 24
+custom_constants/margin_bottom = 24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 1000.0
+margin_bottom = 576.0
+color = Color( 0, 0.419608, 0.462745, 1 )
+
+[node name="OptionsBox" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 1000.0
+margin_bottom = 576.0
+alignment = 1
+
+[node name="TopBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_right = 1024.0
+margin_bottom = 20.0
+
+[node name="OptionsLabel" type="Label" parent="MarginContainer/OptionsBox/TopBox"]
+margin_left = 454.0
+margin_top = 3.0
+margin_right = 546.0
+margin_bottom = 17.0
+size_flags_horizontal = 6
+text = "Audio Options"
+align = 1
+
+[node name="QuitButton" type="Button" parent="MarginContainer/OptionsBox/TopBox"]
+margin_left = 1005.0
+margin_right = 1024.0
+margin_bottom = 20.0
+size_flags_horizontal = 8
+text = "x"
+
+[node name="HSeparator0" type="HSeparator" parent="MarginContainer/OptionsBox"]
+margin_top = 24.0
+margin_right = 1024.0
+margin_bottom = 28.0
+
+[node name="SpeakerBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_top = 32.0
+margin_right = 1024.0
+margin_bottom = 108.0
+custom_constants/separation = 8
+alignment = 1
+
+[node name="SpeakerLabel" type="Label" parent="MarginContainer/OptionsBox/SpeakerBox"]
+margin_left = 410.0
+margin_top = 31.0
+margin_right = 500.0
+margin_bottom = 45.0
+text = "Speaker Setup"
+align = 1
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/OptionsBox/SpeakerBox"]
+margin_left = 508.0
+margin_right = 512.0
+margin_bottom = 76.0
+
+[node name="SpeakerChoice" type="PanelContainer" parent="MarginContainer/OptionsBox/SpeakerBox"]
+margin_left = 520.0
+margin_right = 614.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 94, 52 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Container" type="VBoxContainer" parent="MarginContainer/OptionsBox/SpeakerBox/SpeakerChoice"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 90.0
+margin_bottom = 72.0
+
+[node name="Mono" type="Button" parent="MarginContainer/OptionsBox/SpeakerBox/SpeakerChoice/Container"]
+margin_right = 86.0
+margin_bottom = 20.0
+text = "Mono"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stereo" type="Button" parent="MarginContainer/OptionsBox/SpeakerBox/SpeakerChoice/Container"]
+margin_top = 24.0
+margin_right = 86.0
+margin_bottom = 44.0
+text = "Stereo"
+
+[node name="Surround" type="Button" parent="MarginContainer/OptionsBox/SpeakerBox/SpeakerChoice/Container"]
+margin_top = 48.0
+margin_right = 86.0
+margin_bottom = 68.0
+text = "Surround"
+
+[node name="HSeparator1" type="HSeparator" parent="MarginContainer/OptionsBox"]
+margin_top = 112.0
+margin_right = 1024.0
+margin_bottom = 116.0
+
+[node name="VolumeLabel" type="Label" parent="MarginContainer/OptionsBox"]
+margin_top = 120.0
+margin_right = 1024.0
+margin_bottom = 134.0
+text = "Volume"
+align = 1
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/OptionsBox"]
+margin_top = 138.0
+margin_right = 1024.0
+margin_bottom = 142.0
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/OptionsBox"]
+margin_top = 146.0
+margin_right = 1024.0
+margin_bottom = 160.0
+text = "Music"
+align = 1
+
+[node name="MusicBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_top = 164.0
+margin_right = 1024.0
+margin_bottom = 180.0
+
+[node name="0" type="Label" parent="MarginContainer/OptionsBox/MusicBox"]
+margin_left = 330.0
+margin_top = 1.0
+margin_right = 338.0
+margin_bottom = 15.0
+size_flags_horizontal = 10
+text = "0"
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/OptionsBox/MusicBox"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 16.0
+size_flags_horizontal = 7
+
+[node name="100" type="Label" parent="MarginContainer/OptionsBox/MusicBox"]
+margin_left = 685.0
+margin_top = 1.0
+margin_right = 709.0
+margin_bottom = 15.0
+size_flags_horizontal = 2
+text = "100"
+
+[node name="VoicesLabel" type="Label" parent="MarginContainer/OptionsBox"]
+margin_top = 184.0
+margin_right = 1024.0
+margin_bottom = 198.0
+text = "Voices"
+align = 1
+
+[node name="VoicesBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_top = 202.0
+margin_right = 1024.0
+margin_bottom = 218.0
+
+[node name="0" type="Label" parent="MarginContainer/OptionsBox/VoicesBox"]
+margin_left = 330.0
+margin_top = 1.0
+margin_right = 338.0
+margin_bottom = 15.0
+size_flags_horizontal = 10
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VoicesSlider" type="HSlider" parent="MarginContainer/OptionsBox/VoicesBox"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 16.0
+size_flags_horizontal = 7
+
+[node name="100" type="Label" parent="MarginContainer/OptionsBox/VoicesBox"]
+margin_left = 685.0
+margin_top = 1.0
+margin_right = 709.0
+margin_bottom = 15.0
+size_flags_horizontal = 2
+text = "100"
+
+[node name="SFXLabel" type="Label" parent="MarginContainer/OptionsBox"]
+margin_top = 222.0
+margin_right = 1024.0
+margin_bottom = 236.0
+text = "SFX"
+align = 1
+
+[node name="SFXBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_top = 240.0
+margin_right = 1024.0
+margin_bottom = 256.0
+
+[node name="0" type="Label" parent="MarginContainer/OptionsBox/SFXBox"]
+margin_left = 330.0
+margin_top = 1.0
+margin_right = 338.0
+margin_bottom = 15.0
+size_flags_horizontal = 10
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFXSlider" type="HSlider" parent="MarginContainer/OptionsBox/SFXBox"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 16.0
+size_flags_horizontal = 7
+
+[node name="100" type="Label" parent="MarginContainer/OptionsBox/SFXBox"]
+margin_left = 685.0
+margin_top = 1.0
+margin_right = 709.0
+margin_bottom = 15.0
+size_flags_horizontal = 2
+text = "100"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/OptionsBox"]
+margin_top = 260.0
+margin_right = 1024.0
+margin_bottom = 264.0
+
+[node name="MultiLabel" type="Label" parent="MarginContainer/OptionsBox"]
+margin_top = 268.0
+margin_right = 1024.0
+margin_bottom = 282.0
+text = "Voice Chat"
+align = 1
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/OptionsBox"]
+margin_top = 286.0
+margin_right = 1024.0
+margin_bottom = 290.0
+
+[node name="DeviceBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_top = 294.0
+margin_right = 1024.0
+margin_bottom = 318.0
+alignment = 1
+
+[node name="EnableVC" type="CheckBox" parent="MarginContainer/OptionsBox/DeviceBox"]
+margin_left = 376.0
+margin_right = 517.0
+margin_bottom = 24.0
+size_flags_horizontal = 4
+text = "Enable Voice Chat"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/OptionsBox/DeviceBox"]
+margin_left = 521.0
+margin_right = 525.0
+margin_bottom = 24.0
+
+[node name="DeviceButton" type="MenuButton" parent="MarginContainer/OptionsBox/DeviceBox"]
+margin_left = 529.0
+margin_right = 648.0
+margin_bottom = 24.0
+size_flags_horizontal = 4
+text = "Choose Device..."
+flat = false
+items = [ "Microphone", null, 0, false, false, 0, 0, null, "", false, "Line In", null, 0, false, false, 1, 0, null, "", false, "Stereo Mix", null, 0, false, false, 2, 0, null, "", false ]
+
+[node name="TransmitLabel" type="Label" parent="MarginContainer/OptionsBox"]
+margin_top = 322.0
+margin_right = 1024.0
+margin_bottom = 336.0
+text = "Input Volume"
+align = 1
+
+[node name="TransmitBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_top = 340.0
+margin_right = 1024.0
+margin_bottom = 356.0
+
+[node name="0" type="Label" parent="MarginContainer/OptionsBox/TransmitBox"]
+margin_left = 330.0
+margin_top = 1.0
+margin_right = 338.0
+margin_bottom = 15.0
+size_flags_horizontal = 10
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransmitSlider" type="HSlider" parent="MarginContainer/OptionsBox/TransmitBox"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 16.0
+size_flags_horizontal = 7
+
+[node name="100" type="Label" parent="MarginContainer/OptionsBox/TransmitBox"]
+margin_left = 685.0
+margin_top = 1.0
+margin_right = 709.0
+margin_bottom = 15.0
+size_flags_horizontal = 2
+text = "100"
+
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/OptionsBox"]
+margin_top = 360.0
+margin_right = 1024.0
+margin_bottom = 364.0
+
+[node name="TestCheckbox" type="CheckBox" parent="MarginContainer/OptionsBox"]
+margin_left = 421.0
+margin_top = 368.0
+margin_right = 602.0
+margin_bottom = 392.0
+size_flags_horizontal = 4
+text = "Enable Microphone Test"
+
+[node name="TestBox" type="HBoxContainer" parent="MarginContainer/OptionsBox"]
+margin_top = 396.0
+margin_right = 1024.0
+margin_bottom = 420.0
+
+[node name="Label" type="Label" parent="MarginContainer/OptionsBox/TestBox"]
+margin_left = 213.0
+margin_top = 5.0
+margin_right = 338.0
+margin_bottom = 19.0
+size_flags_horizontal = 10
+text = "Microphone Output"
+
+[node name="TestBar" type="ProgressBar" parent="MarginContainer/OptionsBox/TestBox"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 256, 24 )
+size_flags_horizontal = 3
+value = 45.0
+percent_visible = false
+
+[node name="Label2" type="Label" parent="MarginContainer/OptionsBox/TestBox"]
+margin_left = 685.0
+margin_top = 5.0
+margin_right = 717.0
+margin_bottom = 19.0
+size_flags_horizontal = 2
+text = "0±db"
+
+[node name="Label" type="Label" parent="MarginContainer"]
+margin_left = 24.0
+margin_top = 284.0
+margin_right = 1000.0
+margin_bottom = 315.0
+text = "Woah!
+I'm content!"
+align = 1
+valign = 1
